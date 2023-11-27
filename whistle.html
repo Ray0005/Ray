@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Project</title>
+  <style>
+    #videoPlayer {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <button id="playButton" style="width: 500px; height: 100px;">Play</button>
+  <video id="videoPlayer" playsinline controls width="2000" height="1000">
+    <source src="JoshHutcherson.mp4" type="video/mp4">
+    Your browser does not support the video tag or the file format of this video. 
+    <img src="fallback-image.jpg" alt="Fallback Image">
+  </video>
+
+  <script>
+    var video = document.getElementById('videoPlayer');
+    video.style.display = 'none';
+
+    document.getElementById('playButton').addEventListener('click', function() {
+      video.style.display = 'block';
+      this.style.display = 'none';
+      video.play();
+    });
+  </script>
+</body>
+</html>
